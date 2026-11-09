@@ -1,0 +1,32 @@
+name: Lab 03 - Multiple Jobs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build message
+        run: echo "Building application"
+
+      - name: Print working directory
+        run: pwd
+
+  test:
+    name: Test Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test message
+        run: echo "Testing application"
+
+  security:
+    name: Security Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Security message
+        run: echo "Running security checks" 
